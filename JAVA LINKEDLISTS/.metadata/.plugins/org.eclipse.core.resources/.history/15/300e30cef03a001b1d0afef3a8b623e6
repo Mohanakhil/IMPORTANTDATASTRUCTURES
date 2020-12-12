@@ -1,0 +1,38 @@
+package LINKEDLISTSTEST;
+import java.util.Scanner;
+public class InsertANode 
+{ 
+static class Node
+{
+	int data;
+	Node next;
+Node(int data)
+{
+		this.data=data;
+       	next=null;	
+}	
+}
+public static void push(int newdata)
+{Node newnode=new Node(newdata);
+newnode.data=newdata;
+newnode.next=null;
+	
+}
+public static void main(String[] args) 
+{ Scanner scan=new Scanner(System.in);
+	System.out.println("enter 1-for insert at start\n2-for insert after certain node\n3-for insert at end");
+byte choice= scan.nextByte();
+int element;
+switch(choice)
+{
+case 1-> {
+	System.out.println("enter ele to enter at begin");
+	element=scan.nextInt();
+	push(element);
+	
+}
+}
+
+}
+
+}

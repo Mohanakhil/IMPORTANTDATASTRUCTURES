@@ -1,0 +1,3 @@
+INDEX VERSION 1.131+D:\RAMA\DATASTRUCTURES\JAVA LINKEDLISTS\.metadata\.plugins\org.eclipse.jdt.core
+4005461986.index
+2886988972.index

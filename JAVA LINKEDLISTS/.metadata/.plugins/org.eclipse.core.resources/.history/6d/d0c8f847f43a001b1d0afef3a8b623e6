@@ -1,0 +1,80 @@
+package LINKEDLISTSTEST;
+import java.util.Scanner;
+public class InsertANode 
+{ 
+static class Node
+{
+	int data;
+	Node next;
+Node(int data)
+{
+		this.data=data;
+       	next=null;	
+}	
+}
+public static void push(Node head,int newdata)
+{Node newnode=new Node(newdata);
+newnode.data=newdata;
+newnode.next=null;
+head=newnode;
+}
+public static void insertAfter(Node pointer,int newdata,Node head)
+{
+	
+}
+public static void main(String[] args) 
+{ Scanner scan=new Scanner(System.in);
+byte choice=1;
+int node=0;
+do
+{
+	System.out.println("enter 1-for insert at start\n2-for insert after certain node\n3-for insert at end");
+byte menu= scan.nextByte();
+int element;
+Node head=null;
+switch(menu)
+{
+case 1-> {
+	do
+	{
+	System.out.println("enter ele to enter at begin");
+	element=scan.nextInt();
+	push(head,element);
+	System.out.println("eneter 0 for coming out of first choice");
+	choice=scan.nextByte();
+}while(choice!=0);
+	
+}
+case 2->
+{Node pointer=head;
+	do
+	{
+		System.out.println("enter ele you want to insert after given node");
+		element=scan.nextInt();
+		System.out.println("enter node after which ele is to be  inserted");
+		node=scan.nextInt();
+		while(node>1)
+		{ pointer=pointer.next;
+			node--;
+		}
+	insertAfter(pointer,element,head);
+	System.out.println("eneter 0 for coming out of first choice");
+	choice=scan.nextByte();
+	}while(choice!=0);
+}
+case 3->
+{ Node pointer=head;
+	do
+	{
+		System.out.println("enter ele you want to insert at last of list");
+		element=scan.nextInt();
+		System.out.println("eneter 0 for coming out of first choice");
+		choice=scan.nextByte();
+	}while(choice!=0);
+}
+System.out.println("enter 0 to come out of menu");
+choice =scan.nextByte();
+}
+}while(choice!=0);
+}
+}
